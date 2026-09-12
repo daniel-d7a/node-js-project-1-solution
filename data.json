@@ -1,0 +1,77 @@
+{
+  "auth_users": [],
+  "products": [
+    {
+      "id": "3777695",
+      "name": "Insulated Water Bottle",
+      "description": "Premium quality with excellent build materials and modern design.",
+      "price": 117.31,
+      "image": "https://picsum.photos/seed/1158/300/300"
+    },
+    {
+      "id": "3283111",
+      "name": "Mechanical Keyboard RGB",
+      "description": "Affordable price without compromising quality.",
+      "price": 178.49,
+      "image": "https://picsum.photos/seed/573/300/300"
+    },
+    {
+      "id": "9680948",
+      "name": "Wireless Bluetooth Headphones",
+      "description": "Highly rated by thousands of satisfied customers.",
+      "price": 145.52,
+      "image": "https://picsum.photos/seed/251/300/300"
+    },
+    {
+      "id": "1852956",
+      "name": "Webcam 4K HDR",
+      "description": "Perfect for home office and remote work setups.",
+      "price": 14.9,
+      "image": "https://picsum.photos/seed/308/300/300"
+    },
+    {
+      "id": "1470263",
+      "name": "Smart LED Desk Lamp",
+      "description": "Award-winning design with attention to detail.",
+      "price": 162.4,
+      "image": "https://picsum.photos/seed/1139/300/300"
+    },
+    {
+      "id": "3758105",
+      "name": "Laptop Stand Aluminum",
+      "description": "Award-winning design with attention to detail.",
+      "price": 85.53,
+      "image": "https://picsum.photos/seed/459/300/300"
+    },
+    {
+      "id": "1917858",
+      "name": "Phone Gimbal Stabilizer",
+      "description": "Highly rated by thousands of satisfied customers.",
+      "price": 127.97,
+      "image": "https://picsum.photos/seed/852/300/300"
+    },
+    {
+      "id": "7329694",
+      "name": "Ergonomic Office Chair",
+      "description": "Fast performance with sleek aesthetics.",
+      "price": 92.23,
+      "image": "https://picsum.photos/seed/974/300/300"
+    },
+    {
+      "id": "7861879",
+      "name": "Blue Light Glasses",
+      "description": "Affordable price without compromising quality.",
+      "price": 153.89,
+      "image": "https://picsum.photos/seed/1028/300/300"
+    },
+    {
+      "id": "4631509",
+      "name": "Cable Management Kit",
+      "description": "Award-winning design with attention to detail.",
+      "price": 49.12,
+      "image": "https://picsum.photos/seed/1013/300/300"
+    }
+  ],
+  "carts": [],
+  "orders": []
+}
