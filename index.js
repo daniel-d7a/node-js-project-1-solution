@@ -8,11 +8,11 @@ import { debugRouter } from "./routes/debug.routes.js";
 import { pagesRouter } from "./routes/pages.routes.js";
 import { checkAuth } from "./middleware/checkAuth.js";
 import { checkRole } from "./middleware/checkRole.js";
-import { existsSync } from "node:fs";
+// import { existsSync } from "node:fs";
 
-if (existsSync(".env")) {
-  process.loadEnvFile();
-}
+// if (existsSync(".env")) {
+//   process.loadEnvFile();
+// }
 
 console.log("env jwt secret", process.env.JWT_SECRET);
 
