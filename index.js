@@ -9,8 +9,11 @@ import { pagesRouter } from "./routes/pages.routes.js";
 import { checkAuth } from "./middleware/checkAuth.js";
 import { checkRole } from "./middleware/checkRole.js";
 
-process.loadEnvFile();
-
+try {
+  process.loadEnvFile();
+} catch {
+  // Railway injects env vars directly — no .env file present, that's fine
+}
 const app = express();
 
 app.use(express.json());
