@@ -8,12 +8,16 @@ import { debugRouter } from "./routes/debug.routes.js";
 import { pagesRouter } from "./routes/pages.routes.js";
 import { checkAuth } from "./middleware/checkAuth.js";
 import { checkRole } from "./middleware/checkRole.js";
+import { existsSync } from "node:fs";
 
-try {
+if (existsSync(".env")) {
   process.loadEnvFile();
-} catch {
-  // Railway injects env vars directly — no .env file present, that's fine
 }
+
+console.log("env jwt secret", process.env.JWT_SECRET);
+
+
+
 const app = express();
 
 app.use(express.json());
