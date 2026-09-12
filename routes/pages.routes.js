@@ -6,8 +6,11 @@
 import express from "express";
 import jwt from "jsonwebtoken";
 
-process.loadEnvFile();
+import { existsSync } from "node:fs";
 
+if (existsSync(".env")) {
+  process.loadEnvFile();
+}
 export const pagesRouter = express.Router();
 
 function pageAuth(req, res, next) {
@@ -41,16 +44,32 @@ pagesRouter.get("/orders.html", pageAuth, pageRole("customer"), (req, res) => {
   res.sendFile("pages/orders.html", { root: import.meta.dirname + "/.." });
 });
 
-pagesRouter.get("/merchant/products.html", pageAuth, pageRole("merchant"), (req, res) => {
-  res.sendFile("pages/merchant/products.html", { root: import.meta.dirname + "/.." });
-});
+pagesRouter.get(
+  "/merchant/products.html",
+  pageAuth,
+  pageRole("merchant"),
+  (req, res) => {
+    res.sendFile("pages/merchant/products.html", {
+      root: import.meta.dirname + "/..",
+    });
+  },
+);
 
-pagesRouter.get("/merchant/product-form.html", pageAuth, pageRole("merchant"), (req, res) => {
-  res.sendFile("pages/merchant/product-form.html", { root: import.meta.dirname + "/.." });
-});
+pagesRouter.get(
+  "/merchant/product-form.html",
+  pageAuth,
+  pageRole("merchant"),
+  (req, res) => {
+    res.sendFile("pages/merchant/product-form.html", {
+      root: import.meta.dirname + "/..",
+    });
+  },
+);
 
 pagesRouter.use(express.static("pages"));
 
 pagesRouter.use((req, res) => {
-  res.status(404).sendFile("pages/404.html", { root: import.meta.dirname + "/.." });
+  res
+    .status(404)
+    .sendFile("pages/404.html", { root: import.meta.dirname + "/.." });
 });

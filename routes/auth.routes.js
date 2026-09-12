@@ -11,8 +11,11 @@ import { validateBody } from "../middleware/validateBody.js";
 import { loginSchema } from "../schema/auth/login.schema.js";
 import { registerSchema } from "../schema/auth/register.schema.js";
 
-process.loadEnvFile();
+import { existsSync } from "node:fs";
 
+if (existsSync(".env")) {
+  process.loadEnvFile();
+}
 export const authRouter = express.Router();
 const db = createDB();
 
